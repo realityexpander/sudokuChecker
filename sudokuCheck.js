@@ -32,6 +32,15 @@ function sudokuCheck (boardStr) {
     return arr;
   }
   
+  function checkRow(arr) {
+    let res={}
+    for(let n=0; n<arr.length; n++) {
+      res[arr[n]]=arr[n];
+    }
+
+    return Object.keys(res).length;
+  }
+  
 
   
 }
@@ -46,6 +55,17 @@ function sudokuCheck (boardStr) {
 // 923541678\n\
 // 648792531\n\
 // 157638429'));
+
+// console.log(sudokuCheck('\
+// 795836421\n\
+// 462195387\n\
+// 381247956\n\
+// 279458613\n\
+// 654371892\n\
+// 813629745\n\
+// 147583269\n\
+// 538962174\n\
+// 926714538'));
 
 
 
