@@ -49,7 +49,17 @@ function sudokuCheck (boardStr) {
     return Object.keys(res).length;
   }
   
-
+  function check3x3(arr, x, y) {
+    let res={}
+    let raw=[]
+    for(let j=y-1; j<=y+1; j++) {
+      for(let i=x-1; i<=x+1; i++) {
+        res[arr[i][j]] = arr[i][j];
+        raw.push(arr[i][j])
+      }
+    }
+    return Object.keys(res).length;
+  }
   
 }
 
